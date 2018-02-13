@@ -1,0 +1,9 @@
+{
+	"templatename": "jsfunc.hbs",
+	"name": "Test_Function",
+	"description": "Description for Test_Function",
+	"args": [
+		{"name": "arg1", "description": "Description for arg1", "default": "null"},
+		{"name": "arg2", "description": "Description for arg2"}
+	]
+}

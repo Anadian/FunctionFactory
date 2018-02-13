@@ -1,0 +1,35 @@
+/**
+* @fn {{name}}
+* @brief {{description}}
+{{#args}}
+* @param {{name}}
+*	@type {{type}}
+*	@brief {{description}}
+*	@default {{default}}
+{{/args}}
+* @return <ARRAY>
+*	@entry 0 
+*		@retval 1 on success.
+*		@retval 0 premature return.
+*		@retval <0 on failure.
+*	@entry 1
+*		@retval <object> on success
+*		@retval <error_message> on failure.
+*/
+function {{name}}({{#args}} {{name}},{{/args}}){
+	var _return = [0,null];
+	const FUNCTION_NAME = '{{name}}';
+	//Variables
+
+	Log.log(PROCESS_NAME,MODULE_NAME,FILENAME,FUNCTION_NAME,'debug','received: '+arguments.toString());
+	//Parametre checks
+{{#args}}
+	if({{name}} == undefined) {{name}} = {{default}};
+{{/args}}
+	
+	//Function
+
+	//Return
+	Log.log(PROCESS_NAME,MODULE_NAME,FILENAME,FUNCTION_NAME,'debug','returned: '+_return.toString());
+	return _return;
+}
