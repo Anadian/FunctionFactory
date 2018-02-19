@@ -1,5 +1,5 @@
 {
-	"templatename": "jsfunc.hbs",
+	"templatename": "Resources/templates/jsfunc.hbs",
 	"name": "Test_Function",
 	"description": "Description for Test_Function",
 	"args": [
