@@ -12,7 +12,7 @@ if(require.main === module){
 	const OptionDefinitions = [
 		{name: 'help', alias: 'h', type: Boolean, description: 'Print this help text to stdout and exit.'},
 		{name: 'input', alias: 'I', type: String, description: 'The file to use for input; defaults to "./input.json".'},
-		{name: 'output', alias: 'O', type: String, description: 'The file to write output to; defaults to "./output.json".'},
+		{name: 'output', alias: 'O', type: String, description: 'The file to write output to; defaults to "./output".'},
 		{name: 'template', alias: 'T', type: String, description: 'The template to use; defaults to the file specified in the input-file\'s property, "templatename".'}
 	];
 	const Options = CommandLineArguments(OptionDefinitions);
