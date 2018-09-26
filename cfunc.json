@@ -1,0 +1,28 @@
+{
+	"templatename": "Resources/templates/cfunc.hbs",
+	"name": "CNO_Memory_Copy",
+	"description": "Copies one portion of memory to another.",
+	"type": "cno_u8_type",
+	"prereq": {
+		"prereqs": [
+			{"define": "C\\H\\STDLIB", "necessity": "required"},
+			{"define": "C\\H\\STRING", "necessity": "required"}
+		]
+	},
+	"argument": {
+		"arguments": [
+			{"type": "void", "name": "*output_buffer", "flow": "out", "description": "A pointer to the memory buffer to copy to."},
+			{"type": "void", "name": "*input_buffer", "flow": "in", "description": "A pointer the memory buffer to copy from."},
+			{"type": "c\\size\\ty", "name": "bytes", "flow": "in", "description": "The number of bytes to copy."}
+		]
+	},
+	"return_values": [
+		{"value": 0, "description": "Success."},
+		{"value": 1, "description": "Not supported."},
+		{"value": 2, "description": "Invalid argument."},
+		{"value": ">2", "description": "Failure."}
+	],
+	"post_re": [
+		{"search": ",\\)", "replace": " )", "flags": "gm"}
+	]
+}

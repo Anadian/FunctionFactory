@@ -1,9 +1,28 @@
 {
-	"templatename": "Resources/templates/jsfunc.hbs",
-	"name": "Test_Function",
-	"description": "Description for Test_Function",
-	"args": [
-		{"name": "arg1", "description": "Description for arg1", "default": "null"},
-		{"name": "arg2", "description": "Description for arg2"}
+	"templatename": "Resources/templates/cfunc.hbs",
+	"name": "CNO_FileStream_Open",
+	"description": "Opens a file stream for buffered IO.",
+	"type": "cno_u8_type",
+	"prereq": {
+		"prereqs": [
+			{"define": "C\\H\\STDIO", "necessity": "required"},
+			{"define": "C\\H\\ERRNO", "necessity": "optional"},
+			{"define": "C\\H\\STRING", "necessity": "optional"}
+		]
+	},
+	"argument": {
+		"arguments": [
+			{"type": "cno_filestream_type", "name": "*file", "flow": "out", "description": "A pointer to the filestream to be opened."},
+			{"type": "cno_cstring_type", "name": "mode", "flow": "in", "description": "The mode to open the filestream with."},
+			{"type": "cno_string_type", "name": "filename", "flow": "in", "description": "The name of the file to open/write to."}
+		]
+	},
+	"return_values": [
+		{"value": 0, "description": "Success."},
+		{"value": 1, "description": "Not supported."},
+		{"value": ">1", "description": "Failure."}
+	],
+	"post_re": [
+		{"search": ",\\)", "replace": " )", "flags": "gm"}
 	]
 }

@@ -14,16 +14,19 @@
 
 //Constants
 const FILENAME = '{{filename}}';
-const MODULE_NAME = {{modulename}};;
-const PROCESS_NAME;
+const MODULE_NAME = '{{modulename}}';
+var PROCESS_NAME = '';
 if(require.main === module){
-	PROCESS_NAME = {{processname}};
+	PROCESS_NAME = '{{processname}}';
 } else{
 	PROCESS_NAME = process.argv0;
 }
 
-//Funcions
+//Functions
 
 //Exports and Execution
 if(require.main === module){
+	
+} else{
+	
 }

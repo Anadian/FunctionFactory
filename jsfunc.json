@@ -1,0 +1,13 @@
+{
+	"templatename": "Resources/templates/jsfunc.hbs",
+	"name": "Directory_Information",
+	"description": "Gets exhaustive directory information in JSON format.",
+	"arguments": [
+			{"type": "String", "name": "directory", "default": "null", "description": "The directory to get information on."},
+			{"type": "Boolean", "name": "symlink", "default": "false", "description": "Stat the symlink files themselves (lstat) instead of the files they point to. (stat)"},
+			{"type": "Boolean", "name": "recurse", "default": "false", "description": "Recurse any subdirectories encountered."}
+	],
+	"post_re": [
+		{"search": ",\\)", "replace": " )", "flags": "gm"}
+	]
+}

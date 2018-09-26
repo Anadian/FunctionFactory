@@ -1,0 +1,7 @@
+{
+	"templatename": "Resources/templates/jsfile.hbs",
+	"filename": "directory_information.js",
+	"description": "Gets exhaustive directory information in JSON format.",
+	"modulename": "Directory_Information",
+	"processname": "Directory_Information"
+}
