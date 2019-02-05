@@ -1,7 +1,7 @@
 {
 	"templatename": "Resources/templates/jsfile.hbs",
-	"filename": "directory_information.js",
-	"description": "Gets exhaustive directory information in JSON format.",
-	"modulename": "Directory_Information",
-	"processname": "Directory_Information"
+	"filename": "request_return.js",
+	"description": "Prints the return value of an HTTP Request.",
+	"modulename": "RequestReturn",
+	"processname": "request_return"
 }

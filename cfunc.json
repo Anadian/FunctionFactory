@@ -1,19 +1,18 @@
 {
 	"templatename": "Resources/templates/cfunc.hbs",
-	"name": "CNO_Memory_Copy",
-	"description": "Copies one portion of memory to another.",
+	"name": "CNO_DynamicBuffer_Serialize",
+	"description": "Serialize a dynamic buffer to a string.",
 	"type": "cno_u8_type",
-	"prereq": {
+	/*"prereq": {
 		"prereqs": [
 			{"define": "C\\H\\STDLIB", "necessity": "required"},
 			{"define": "C\\H\\STRING", "necessity": "required"}
 		]
-	},
+	},*/
 	"argument": {
 		"arguments": [
-			{"type": "void", "name": "*output_buffer", "flow": "out", "description": "A pointer to the memory buffer to copy to."},
-			{"type": "void", "name": "*input_buffer", "flow": "in", "description": "A pointer the memory buffer to copy from."},
-			{"type": "c\\size\\ty", "name": "bytes", "flow": "in", "description": "The number of bytes to copy."}
+			{"type": "c\\string\\ty", "name": "string", "flow": "out", "description": "The output string."},
+			{"type": "C\\DynamicBuffer\\ty", "name": "*dynamic_buffer", "flow": "in", "description": "A pointer to the DynamicBuffer to serialize."}
 		]
 	},
 	"return_values": [

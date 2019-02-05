@@ -1,29 +1,32 @@
 /**
-* @fn CNO_Memory_Copy
-* @brief Copies one portion of memory to another.
-* @param void *output_buffer [out] A pointer to the memory buffer to copy to.
-* @param void *input_buffer [in] A pointer the memory buffer to copy from.
-* @param c\size\ty bytes [in] The number of bytes to copy.
-* @pre C\H\STDLIB required
-* @pre C\H\STRING required
-* @return cno_u8_type
-* @retval 0 Success.
-* @retval 1 Not supported.
-* @retval 2 Invalid argument.
-* @retval >2 Failure.
+* @fn Async_Request
+* @brief Asynchornis use of request module.
+* @async true
+* @param url
+*	@type String
+*	@brief The URL to be http-get&#x27;d.
+*	@default null
+* @return <ARRAY>
+*	@entry 0 
+*		@retval 1 premature return.
+*		@retval 0 on success.
+*		@retval <0 on failure.
+*	@entry 1
+*		@retval <object> on success
+*		@retval <error_message> on failure.
 */
-cno_u8_type CNO_Memory_Copy( void *output_buffer, void *input_buffer, c\size\ty bytes ){
-	cno_u8_type _return = 1;
-	/* Variables */
-	
-	/* Arguments */
+async function Async_Request( url ){
+	var _return = [1,null];
+	const FUNCTION_NAME = 'Async_Request';
+	//Variables
 
-#if C\H\STDLIB C\H\STRING
-	/* Function */
+	Log.log(PROCESS_NAME,MODULE_NAME,FILENAME,FUNCTION_NAME,'debug','received: '+arguments.toString());
+	//Parametre checks
+	if(url == undefined) url = null;
 	
-#else
-	_return += 1;
-#endif /* C\H\STDLIB C\H\STRING */
-	/* Return */
+	//Function
+
+	//Return
+	Log.log(PROCESS_NAME,MODULE_NAME,FILENAME,FUNCTION_NAME,'debug','returned: '+_return.toString());
 	return _return;
 }

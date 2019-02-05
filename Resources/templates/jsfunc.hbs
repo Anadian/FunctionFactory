@@ -1,6 +1,9 @@
 /**
 * @fn {{name}}
-* @brief {{description}}
+* @brief {{& description}}
+{{#asynchronous}}
+* @async {{asynchronous}}
+{{/asynchronous}}
 {{#arguments}}
 * @param {{name}}
 *	@type {{type}}
@@ -16,7 +19,7 @@
 *		@retval <object> on success
 *		@retval <error_message> on failure.
 */
-function {{name}}({{#arguments}} {{name}},{{/arguments}}){
+{{#asynchronous}}async {{/asynchronous}}function {{name}}({{#arguments}} {{name}},{{/arguments}}){
 	var _return = [1,null];
 	const FUNCTION_NAME = '{{name}}';
 	//Variables

@@ -1,12 +1,11 @@
 {
 	"templatename": "Resources/templates/jsfunc.hbs",
-	"name": "Directory_Information",
-	"description": "Gets exhaustive directory information in JSON format.",
+	"name": "Async_Request",
+	"description": "Asynchornis use of request module.",
 	"arguments": [
-			{"type": "String", "name": "directory", "default": "null", "description": "The directory to get information on."},
-			{"type": "Boolean", "name": "symlink", "default": "false", "description": "Stat the symlink files themselves (lstat) instead of the files they point to. (stat)"},
-			{"type": "Boolean", "name": "recurse", "default": "false", "description": "Recurse any subdirectories encountered."}
+			{"type": "String", "name": "url", "default": "null", "description": "The URL to be http-get'd."}
 	],
+	"asynchronous": true,
 	"post_re": [
 		{"search": ",\\)", "replace": " )", "flags": "gm"}
 	]
