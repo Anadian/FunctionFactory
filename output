@@ -1,11 +1,11 @@
 /**
-* @fn Async_Request
-* @brief Asynchornis use of request module.
+* @fn Await_Request
+* @brief await request-promise-native with the given options, and return the response.
 * @async true
-* @param url
-*	@type String
-*	@brief The URL to be http-get&#x27;d.
-*	@default null
+* @param request_options
+*	@type Request_Options
+*	@brief The request-options object to be passed to request-promise-native.
+*	@default 
 * @return <ARRAY>
 *	@entry 0 
 *		@retval 1 premature return.
@@ -15,14 +15,14 @@
 *		@retval <object> on success
 *		@retval <error_message> on failure.
 */
-async function Async_Request( url ){
+async function Await_Request( request_options ){
 	var _return = [1,null];
-	const FUNCTION_NAME = 'Async_Request';
+	const FUNCTION_NAME = 'Await_Request';
 	//Variables
 
 	Log.log(PROCESS_NAME,MODULE_NAME,FILENAME,FUNCTION_NAME,'debug','received: '+arguments.toString());
 	//Parametre checks
-	if(url == undefined) url = null;
+	if(request_options == undefined) request_options = ;
 	
 	//Function
 

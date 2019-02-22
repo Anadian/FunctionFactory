@@ -1,0 +1,21 @@
+{
+	"templatename": "Resources/templates/c_makefile.hbs",
+	"project_name": "retro-minesweeper",
+	"phase_prepare": 1,
+	"phase_git_pull": 1,
+	"phase_copy": 1,
+	"phase_lint": 1,
+	"phase_directories": 1,
+	"phase_build": 1,
+	"phase_compile": 1,
+	"phase_link": 1,
+	"phase_test": 1,
+	"phase_run": 1,
+	"phase_package": 1,
+	"phase_install": 1,
+	"phase_release": 1,
+	"phase_distribute": 1,
+	"phase_git_push": 1,
+	"phase_uninstall": 1,
+	"phase_cleanup": 1
+}

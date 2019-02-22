@@ -1,9 +1,9 @@
 {
 	"templatename": "Resources/templates/jsfunc.hbs",
-	"name": "Async_Request",
-	"description": "Asynchornis use of request module.",
+	"name": "Await_Request",
+	"description": "await request-promise-native with the given options, and return the response.",
 	"arguments": [
-			{"type": "String", "name": "url", "default": "null", "description": "The URL to be http-get'd."}
+			{"type": "Request_Options", "name": "request_options", "default": null, "description": "The request-options object to be passed to request-promise-native."}
 	],
 	"asynchronous": true,
 	"post_re": [
