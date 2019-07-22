@@ -1,32 +1,32 @@
+#!/usr/local/bin/node
+
 /**
-* @fn Await_Request
-* @brief await request-promise-native with the given options, and return the response.
-* @async true
-* @param request_options
-*	@type Request_Options
-*	@brief The request-options object to be passed to request-promise-native.
-*	@default 
-* @return <ARRAY>
-*	@entry 0 
-*		@retval 1 premature return.
-*		@retval 0 on success.
-*		@retval <0 on failure.
-*	@entry 1
-*		@retval <object> on success
-*		@retval <error_message> on failure.
+* @file application-log-standard.js
+* @brief Standardised level names and console formatting.
+* @author Anadian
+* @copyright MITlicensetm(2019,Canosw)
 */
-async function Await_Request( request_options ){
-	var _return = [1,null];
-	const FUNCTION_NAME = 'Await_Request';
-	//Variables
 
-	Log.log(PROCESS_NAME,MODULE_NAME,FILENAME,FUNCTION_NAME,'debug','received: '+arguments.toString());
-	//Parametre checks
-	if(request_options == undefined) request_options = ;
+//Dependencies
+	//Internal
+	//Standard
+	//External
+
+//Constants
+const FILENAME = 'application-log-standard.js';
+const MODULE_NAME = 'ApplicationLogStandard';
+var PROCESS_NAME = '';
+if(require.main === module){
+	PROCESS_NAME = 'application-log-standard';
+} else{
+	PROCESS_NAME = process.argv0;
+}
+
+//Functions
+
+//Exports and Execution
+if(require.main === module){
 	
-	//Function
-
-	//Return
-	Log.log(PROCESS_NAME,MODULE_NAME,FILENAME,FUNCTION_NAME,'debug','returned: '+_return.toString());
-	return _return;
+} else{
+	
 }

@@ -1,0 +1,21 @@
+{
+	"templatename": "Resources/templates/rust_makefile.hbs",
+	"project_name": "rust-test",
+	"phase_prepare": 1,
+	"phase_git_pull": 0,
+	"phase_copy": 0,
+	"phase_lint": 0,
+	"phase_directories": 1,
+	"phase_build": 1,
+	"phase_compile": 1,
+	"phase_link": 0,
+	"phase_test": 0,
+	"phase_run": 1,
+	"phase_package": 0,
+	"phase_install": 0,
+	"phase_release": 0,
+	"phase_distribute": 0,
+	"phase_git_push": 0,
+	"phase_uninstall": 0,
+	"phase_cleanup": 1
+}

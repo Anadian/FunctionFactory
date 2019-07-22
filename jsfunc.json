@@ -1,11 +1,11 @@
 {
 	"templatename": "Resources/templates/jsfunc.hbs",
-	"name": "Await_Request",
-	"description": "await request-promise-native with the given options, and return the response.",
+	"name": "PackageJSONDataFromMasterJSONObject",
+	"description": "Interpret and return the data for the 'package.json' file from the given object.",
 	"arguments": [
-			{"type": "Request_Options", "name": "request_options", "default": null, "description": "The request-options object to be passed to request-promise-native."}
+			{"type": "Object", "name": "input_object", "default": "null", "description": "The object to derive the 'package.json' data from."}
 	],
-	"asynchronous": true,
+	"asynchronous": false,
 	"post_re": [
 		{"search": ",\\)", "replace": " )", "flags": "gm"}
 	]

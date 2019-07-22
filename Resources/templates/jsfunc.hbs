@@ -7,8 +7,8 @@
 {{#arguments}}
 * @param {{name}}
 *	@type {{type}}
-*	@brief {{description}}
-*	@default {{default}}
+*	@brief {{& description}}
+*	@default {{& default}}
 {{/arguments}}
 * @return <ARRAY>
 *	@entry 0 
@@ -27,7 +27,7 @@
 	Log.log(PROCESS_NAME,MODULE_NAME,FILENAME,FUNCTION_NAME,'debug','received: '+arguments.toString());
 	//Parametre checks
 {{#arguments}}
-	if({{name}} == undefined) {{name}} = {{default}};
+	if({{name}} == undefined) {{name}} = {{& default}};
 {{/arguments}}
 	
 	//Function

@@ -1,7 +1,7 @@
 {
 	"templatename": "Resources/templates/jsfile.hbs",
-	"filename": "github-forks.js",
-	"description": "Gets the 'lastest commit' of every fork listed in a GitHub repo's forks page.",
-	"modulename": "GitHubForks",
-	"processname": "github-forks"
+	"filename": "application-log-standard.js",
+	"description": "Standardised level names and console formatting.",
+	"modulename": "ApplicationLogStandard",
+	"processname": "application-log-standard"
 }
